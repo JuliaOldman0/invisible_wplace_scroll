@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #110033;
+}
+
+.circle {
+  position: relative;
+  width: 1300px;
+  height: 575.5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle .outside {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 1.25s;
+  z-index: 1000;
+}
+
+.circle.active .outside {
+  transform: rotate(360deg);
+}
+/* rotate(calc(360deg / 6 * var(--i)))
+*/
+.circle li {
+  position: absolute;
+  /*left: 0;*/
+  list-style: none;
+  transition: 0.5s;
+  transform: translate(calc(1px * var(--x)), calc(1px * var(--y)));
+  /* transform-origin: 650px; */
+  scale: 0;
+  transition-delay: calc(0.05s * var(--i));
+}
+
+.circle.active li {
+  scale: 1;
+}
+
+.circle li a {
+  position: relative;
+  display: flex;
+  /*transform: rotate(calc(360deg / -6 * var(--i)));*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.circle li:hover a .outsideOne {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/01.png);
+}
+
+.circle li:hover a .outsideOne {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/01.png);
+}
+
+.circle li:hover a .outsideTwo {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/02.png);
+}
+
+.circle li:hover a .outsideThree {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/06.png);
+}
+
+.circle li:hover a .outsideFour {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/18.png);
+}
+
+.circle li:hover a .outsideFive {
+  transform: translate(0, -70px);
+  transition: 0.3s;
+  background-image: url(images/hover-outside/15.png);
+}
+
+.hover_style {
+  color: #ffb615;
+  font-size: 100px;
+  font-weight: 400;
+}
